@@ -16,10 +16,33 @@ namespace LineComparisonComputation
             int Y1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Y2");
             int Y2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter x, y coordinates of the line 2::");
+            Console.WriteLine("A1");
+            int A1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("A2");
+            int A2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("B1");
+            int B1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("B2");
+            int B2 = Convert.ToInt32(Console.ReadLine());
 
-            double L1 = new double();
-            L1 = Math.Sqrt(Math.Pow((X2 - X1),2) + Math.Pow((Y2 - Y1),2));
+            double L1 = Math.Sqrt(Math.Pow((X2 - X1),2) + Math.Pow((Y2 - Y1),2));
             Console.WriteLine("Length of line 1 is:: "+ L1);
+            double L2 = Math.Sqrt(Math.Pow((A2 - A1), 2) + Math.Pow((B2 - B1), 2));
+            Console.WriteLine("Length of line 1 is:: " + L2);
+            Console.WriteLine("-----------------------------");
+            bool result = L1.Equals(L2);
+            if (result == false)
+            {
+                Console.WriteLine("Therefore, Lines L1 and L2 are NOT EQUAL.");
+            }
+            else
+            {
+                Console.WriteLine("Therefore, Lines L1 and L2 are EQUAL.");
+            }
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Press any Key to Exit.");
+            Console.ReadKey();
         }
     }
 }
